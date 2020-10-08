@@ -1,0 +1,32 @@
+CocoaDepot::AppSpecification.new do |s|
+    s.name = "{{POD_NAME}}"
+    s.version = "0.1.0-alpha.0"
+    s.license = "MIT"
+    s.homepage = "https://rubygems.org"
+    s.summary = "TODO: A short description of {{POD_NAME}}."
+    s.description = <<DESC
+    TODO: Add long description of the application here.
+    DESC
+    s.platform = :ios
+    s.authors = {
+        "{{USER_NAME}}" => "{{USER_EMAIL}}"
+    }
+
+    s.target "{{POD_NAME}}" do |t|
+        t.platform = :ios
+        t.deployment_target = "11.0"
+        t.bundle_identifier = "com.cocoadepot.template"
+        t.source_files = "Mock/Sources/**/*.{swift,h,m,mm}"
+        t.resources = "Mock/Resources/**/*.*"
+        t.localization_resource_files = "Mock/Localizations/*.lproj"
+        t.share_build_settings do |share|
+          share.info_plist_file = "Mock/Info.plist"
+        end
+
+        # You can use :source => :depot to use local pod
+        # t.dependency "DepotUI", :source => :depot
+        t.test "{{POD_NAME}}UnitTest" do |unit|
+
+        end
+    end
+end
