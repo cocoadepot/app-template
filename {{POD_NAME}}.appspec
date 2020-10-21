@@ -16,11 +16,11 @@ CocoaDepot::AppSpecification.new do |s|
         t.platform = :ios
         t.deployment_target = "11.0"
         t.bundle_identifier = "com.cocoadepot.template"
-        t.source_files = "Mock/Sources/**/*.{swift,h,m,mm}"
-        t.resources = "Mock/Resources/**/*.*"
-        t.localization_resource_files = "Mock/Localizations/*.lproj"
+        t.source_files = "App/Sources/**/*.{swift,h,m,mm}"
+        t.resources = "App/Resources/**/*.*"
+        t.localization_resource_files = "App/Localizations/*.lproj"
         t.share_build_settings do |share|
-          share.info_plist_file = "Mock/Info.plist"
+          share.info_plist_file = "App/Info.plist"
         end
 
         # You can use :source => :depot to use local pod
