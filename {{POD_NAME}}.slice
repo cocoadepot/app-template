@@ -1,0 +1,4 @@
+Cocoadepot::AppSlice.new do |slice|
+    
+
+end
